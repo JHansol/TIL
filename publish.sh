@@ -1,8 +1,8 @@
+gitbook install && gitbook build
 git checkout gh-pages
 git pull origin gh-pages --rebase
-gitbook install && gitbook build
 cp -R _book/* .
+git clean -fx node_modules
+git clean -fx _book
 git add .
-git commit -m "Update gitbook"
-git push origin gh-pages
-git checkout master
+git commit -a -m "Update gitbook"
